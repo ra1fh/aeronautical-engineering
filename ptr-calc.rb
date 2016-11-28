@@ -38,7 +38,6 @@ def ptr_calc(alt)
             else
                 h1 = alt
             end
-            name = layer[:n]
             t, p, rho = ptr_calc_layer(t0: t, p0: p, rho0: rho, h0: layer[:h0], h1: h1, a: layer[:a])
         end
     end
@@ -68,7 +67,7 @@ if __FILE__ == $0
         exit 1
     end
 
-    t, p, rho, name = ptr_calc(alt)
+    t, p, rho = ptr_calc(alt)
 
     puts("alt  = #{alt}")
     puts("t    = #{t} K")
