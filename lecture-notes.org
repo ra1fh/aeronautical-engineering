@@ -1,0 +1,735 @@
+#+STARTUP: latexpreview
+#+STARTUP: indent
+
+* Aeronautical Engineering
+
+** Lecture 1: Introduction and Ballooning
+
+*** Gas Law
+
+*Base Formulas*
+
+$p V = n R  T$
+
+  p: pressure PA
+  V: Volume m^3
+  n: Number of moles
+  R: Universial Gas constant in $\frac{J}{mol * K}$
+  T: Temperature K
+
+$\rho = \frac{m}{V}$ => $V = \frac{m}{\rho}$
+
+  $\rho$: density
+  m: mass
+  V: Volume
+
+$m = n M$ => $n = \frac{m}{M}$
+
+  n: number of mols
+  M: mass per mol
+
+*Combine to eliminate V and n*
+
+$n = \frac{m}{M}$
+
+$p \frac{m}{\rho} = \frac{m}{M} * R * T$
+
+$\frac{p}{\rho} = \frac{R}{M} T$ => $p = \rho \frac{R}{M}T$
+
+$\frac{R}{M}$: specific gas constant $R_{specific}$, dependent on gas type only
+
+$p = \rho R_{specific} T$ (equation of state)
+
+R: specific gas constant
+
+$R_{specific} = 287.00 \frac{J}{kg K}$ for air
+
+*** Ballooning
+
+Volume of air/gas.
+
+max force $F_L = m g = \rho_{air} V g$ with $m = \rho V$
+
+ballon $F_L = \rho_{air} V g - \rho_{gas} V g - F_{gplayload}$
+
+lift of balloon: $F_L = \rho_{atm} V g ( 1 - \frac{\rho_{gas}}{\rho_{atm}} )$
+
+assumption: $p_{inside} = p_{outside}$ (true for some ballons, but not all)
+
+$\rho_1 \frac{R}{M_1} T_1 = \rho_2 \frac{R}{M_2} T_2$ => $\frac{\rho_1}{\rho_2} = \frac{T_2}{T_1} \frac{M_1}{M_2}$
+
+*gas ballon:*
+
+$F_L = \rho_{atm} V g ( 1 - \frac{\rho_{gas}}{\rho_{atm}} )$ => $F_L = \rho_{atm} V g ( 1 - \frac{M_{gas}}{M_{air}} )$
+
+M_he = 4.0 g/mol
+M_air = 28.97 g/mol
+M_h2 = 2.0 g/mol
+
+ratio (air helium): 1/7
+
+$F_L = \rho_{atm} V g * \frac{6}{7}$
+
+*for hot air balloon*
+
+$F_L = \rho_{atm} V g ( 1 - \frac{\rho_{gas}}{\rho_{atm}} )$ => $F_L = \rho_{atm} V g ( 1 - \frac{T_{atm}}{T_{gas}} )$
+
+with $T_{gas} = T_{atm} + \Delta T$
+
+$F_L = \rho_{atm} V g ( 1 - \frac{T}{T + \Delta T} )$
+$F_L = \rho_{atm} V g ( \frac{T + \Delta T}{T + \Delta T} - \frac{T}{T + \Delta T} )$
+$F_L = \rho_{atm} V g \frac{\Delta T}{T + \Delta T}$
+
+to get same amount of lift as helium ballon:
+
+$\frac{\Delta T}{T + \Delta T} = 6/7$ => $\Delta T = 6 T$ => lift of hot air usually much smaller then helium
+
+
+** Lecture 2: The Standard Atmosphere
+*** standard athmosphere I
+as a function of altitude we need:
+- pressure p [Pa]
+- air density $\rho$ [kg/m^3]
+- temperature T [K]
+
+physically correct, so it obeys
+- equation of state: $p = \rho R T$ R = 287.00 J/kgK
+- pressure increase due to gravity
+
+model athmosphere:
+- weather ignored
+
+$\Sigma F_{down} = \Sigma F_{up}$
+$mg + (p + \Delta p) A = p A$
+$\rho \cdot A \cdot \Delta h \cdot g = p A - p A - \Delta p A$
+$\rho \cdot \Delta h \cdot g = - \Delta p$
+$\Delta p = - \rho \cdot g \cdot \Delta h$ (only true for small discs, small delta, small altitude)
+$dp = -\rho\ g\ dh$
+
+two equations:
+- equation of state: $p = \rho R T$
+- hydrostatic equation: $dp = -\rho\ g\ dh$
+
+needed:
+- need to define temperature as function of altitude
+- define start value for pressure
+
+Sea level (h = 0m):
+$p_0 = 101325\ Pa$
+$T_0 = 15^{\circ} C = 288.15K$
+$\rho_0 = 1.225 \frac{kg}{m^3}$
+
+*** standard athmosphere II
+$dp = - \frac{p}{R T}\ g\ dh$
+$\frac{1}{p}dp = - \frac{g}{RT} dh$
+
+$T_1 = T_0 + a(h_1 - h_0)$ (formula of Toussaint)
+
+$a = \frac{dT}{dh}$
+$dh = \frac{dT}{a}$
+
+$\frac{1}{p} dp = - \frac{g}{R} \frac{1}{T} \frac{dT}{a}$
+
+$\int_{p_0}^{p_1} \frac{1}{p} dp = - \frac{g}{aR} \int_{T_0}^{T_1} \frac{1}{T} dT$
+
+
+$\ln p_1 - \ln p_0 = - \frac{g}{aR} (\ln T_1 - \ln T_0)$
+
+$e^{\ln p_1 - \ln p_0} = e^{-\frac{g}{a R}(\ln T_1 - ln T_0)}$
+
+$\frac{e^{\ln p_1}}{e^{\ln p_0}} = (e^{\ln T_1 - \ln T_0})^{-\frac{g}{a R}}$
+
+$\frac{p_1}{p_0} = (\frac{T_1}{T_0})^{- \frac{g}{a R}}$ with $p = \rho R T$
+
+$\frac{\rho_1 R T_1}{\rho_0 R T_0} = (\frac{T_1}{T_0})^{- \frac{g}{a R}}$
+
+$\frac{\rho_1}{\rho_0} = (\frac{T_1}{T_0})^{- \frac{g}{a R} - 1}$ works only for a != 0, need separate equation for isothermal layer.
+
+unit of a: K/m
+
+for isothermal layer:
+$\frac{p_1}{p_0} = e^{- \frac{g}{R T} (h_1 - h_0)}$
+
+$\frac{\rho_1}{\rho_0} = e^{- \frac{g}{R T} (h_1 - h_0)}$
+
+*** Geopotential and Geometric altitude
+- geopotential altitude h , assumption g0 = constant
+- geometric altitude h_g, g varies
+
+$g_0 = \frac{G M_e}{R_e^2}$
+
+$g = \frac{G M_e}{(R_e + h_G)^2}$
+
+$\frac{g}{g_0} = \frac{R_e^2}{(R_e + h_G)^2}$
+
+$dh = \frac{g}{g_0}dh_g = \frac{R_e^2}{(R_e + h_g)^2} dh_g$
+
+$\int_0^h dh = \int_0^{h_g} \frac{R_e^2}{(R_e + h_g)^2} dh_g$
+
+$h = \frac{R_e}{R_e + h_g} h_g$
+
+$R_e = 6378000m = 6378km$
+** Lecture 3: How aircraft fly
+Forces on aircraft:
+- lift L <=> weight W
+- thrust T <=> drag D
+
+$L=W$
+$T=D$
+
+*** Lift
+
+$L = C_L \frac{1}{2}\rho V^2 S$ in Newton!!!
+
+$C_L$   = Lift coefficient [no dimension]
+$\rho$    = Air density [kg/m^3]
+$V$   = velocity [m/s]
+$S$   = Wing surface area [m^2]
+
+Lift coefficient $C_L$:
+- efficiency of the airfoil in generating lift
+- depends on airfoil and angle of attack
+- airfoil described by NACA notation
+- thickness, camber, chrord, thickness
+
+Where does the lift come from?
+- Bernoulli's law: sum of static and dynamic pressure is constant
+  $p + \frac{1}{2} \rho V^2 = constant$
+- Higher velocity means lower pressure
+- Nasa foilsim
+
+Take off and landing:
+- less lift because speed is low
+- add high lift devices
+- flaps back of wing
+- slats front of wing
+
+*** Drag
+
+$D = C_D \frac{1}{2} \rho V^2 S$
+
+$C_D$ = Drag coefficient
+
+    = Profile drag + Parasitic drag
+    = Pressure drag + Friction drag + Parasitic drag
+$\rho$   = Air density [kg/m^3]
+$V$  = Velocity [m/s]
+$S$  = Wing surface area [m^2]
+
+
+As angle of attack increases, $C_D$ increases as well as $C_L$.
+- maximum $C_L/C_D$ ratio is called glide ratio
+- for optimum flight, stay close to optimum glide ratio
+
+*** Thrust and Weight
+
+Engine types:
+- piston engines
+- turboprop
+- turbojet
+- turbofan
+- ramjet
+
+Fly regimes:
+- high and slow: no option, not enough lift
+- high and fast: civil aviation
+- low  and slow: possible, high lift and low drag, small planes
+- low  and fast: inefficient, military does anyway
+
+- Aircraft empty weight:
+  - structure
+  - systems
+  - crew
+  - operating itmes
+- Payload
+- Fuel
+
+** Lecture 4: Cockpits and Navigation
+*** Cockpits
+- 747 (1970). three persons in cockpit
+- 747-400. glass cockpit
+- circuit breakers to switch off individual systems
+- mode control panel, central, auto pilot, height, direction
+*** Instruments
+Units:
+- 1 nm = 1852 m nautical miles
+- 1 ft = 0.3048 m altitude
+- 1 kts = 1 nm/h = 1852m/3600s = 0.51444 m/s
+- 1 ft/min = 0.3048m/60s = 0.00508 m/s (1500 ft/min regular speed)
+- mach:
+
+$M = \frac{V_{TAS}}{a}$ a = speed of sound
+
+$a=\sqrt{\gamma R T}$  # speed of sound
+
+$\gamma = 1.4$      # some constant
+
+$R = 287.00J/kgK$
+
+Measuring speed
+- air speed
+- ground speed
+- pitot tube
+- whole in the front: dynamic pressure
+- opening in the side, static opening, lower pressure, static pressure
+
+$P_{tot} = P_{st} + P_{dyn}$
+
+$P_{tot} = P_{st} + \frac{1}{2} \rho V^2$
+
+- static pressure used to measure altutide
+- static pressure also used to measure vertical speed
+- air density is included, assumed to be constant
+- equivalent air speed (EAS) with assumed rho at sea level
+- true air speed (TAS)
+- relationship between EAS and TAS:
+
+$\frac{1}{2} \rho_0 V_{EAS}^2 = \frac{1}{2} \rho V_{TAS}^2$
+
+$V_{TAS} = \sqrt{\frac{\rho_0}{\rho}} V_{EAS}$
+
+- in cockpit no conversion, EAS is show, because it's a measure for the
+  dynamic pressure
+
+39286.90249007389
+
+*** Instruments II
+Measuring altitude
+- static pressure
+- altitude: relative to sea level QNH
+- flight level: uses standard reference of 1013.25 hPa QNE
+- height: altitude above airport QFE
+- altitude referes to altitude above sea level
+- above the transition altitude, flight level (FL) are used
+- flight levels, in 100ft, are relative to 1013.25 hPA
+
+Examples
+- FL085 means 8500ft above 101325 Pa
+- 8500ft means 8500ft above sea level
+
+Navigation
+- difference between true north and magnetic north
+- magnetic north pole wanders around
+- maps and variation are updated yearly
+
+What's our heading
+- compass + deviation = magnetic
+- magnetic + variation = true
+- heading + wind = track
+** Lecture 5: Structural Concepts
+*** Early structures
+
+| Period     | Structures                 | Materials          |
+|------------+----------------------------+--------------------|
+| 1903-1920  | cables, lath, fabric       | steel, wood, linen |
+| 1910-1920  | truss, spar, ribs, fabrics | steel rods, tubes  |
+| 1920-1940  | Load-carrying wooden wings | Wood               |
+| 1932-today | Stiffened shell structures | Aluminium          |
+| 1948-today | Pressure cabin             | Improved Al-alloys |
+| 1980-today | Composite structures       | Carbon fibres      |
+
+*** From truss to beam
+
+- I-Beam
+- Flanges
+
+*** Shell structures
+- Boeing and Dougles made first all metal aircraft 1935
+- Rivets for joins
+- load bearing skins
+- monocoque - only load bearing skin
+- semi-monocoque - with some supporting elements
+
+Principal structure elements (PSE)
+- principal structural elements, primary structure, carries loads,
+  failure is catastrophic
+- non-principial structural element, secondary structure, failure
+  non-catastrophic, hatches, fairings
+
+- Limit load: experienced once in a lifetime of a aircraft, no
+  remaining damage allowed
+- Ultimate load: limit load x safety factor (1.5), failure allowed
+  after 3 seconds
+- Failure behavior
+- elastic behaviour, deformation reversible
+- plastic behaviour, deformation permanent
+- higher safety factor for composite than for metal alloy
+
+*** Fatigue
+Force equilibrium on hull:
+
+$\Delta p = p_2 - p_1$
+
+$2 \sigma t = \int(\Delta p \cdot R sin \phi)d\phi$
+
+$2\sigma t = \Delta p \cdot 2 R$
+
+$\delta_{circ} = \frac{\Delta p R}{t}$
+
+$\Delta p$: pressure difference
+$R$: radius of hull cylinder
+$t$: thickness
+
+$\sigma \cdot 2 \pi R \cdot t = \Delta p \cdot \pi R^2$
+
+$\sigma_{long} = \frac{\Delta p R}{2 t}$
+
+$\frac{\sigma_{circ}}{\sigma_{long}} = 2$
+
+Fatigue
+- due to repetetive loading
+- load, smaller than breaking load, destroys parts
+- failure stress for brittle aluminium reduces with number of cycles
+- usually indication is cracks
+- two limits: visibility limit (detection), criticality limit (failure)
+
+Locations: Wings
+- remous (wind variation)
+- manoevres
+- flaps, thrust
+
+Location: Fuselage
+- Pressurisation (once per flight)
+- Wing loads
+
+** Lecture 6: Stability and Control
+*** Controls
+Wing warping
+Control surfaces
+
+Flight controls:
+- Thrust, speed control
+- Ailerons, bank angle control
+- Elevator, nose up/down pitchg
+- Rudder, controls yawing movement, heading
+- only 4 controls, but 6 degrees of freedom
+
+Fly by wire:
+- no direct connection between stick and control surfaces
+- computer inbetween
+
+*** Angles and Axes
+Body axes
+- Xb forward direction axes
+- Yb wing on the right side
+- Zb pointing down
+- Xb rotation: roll or bank angle
+- Yb rotation: pitch angle
+- Zb rotation: yaw
+
+Sing convention: negative deflection is positive aircraft response
+
+Rudder
+- yaw angle $\psi$
+- rudder angle $-\delta_r$
+
+Aileron
+- roll angle $\phi$
+- aileron angle $-\delta_{a,r}, -\delta_{a,l}$
+
+Elevator
+- pitch angle $\theta$
+- elevator angle $-\delta_e$
+
+Stability axes: $X_s$ attached to velocity
+Body axes: $X_b$ attached to aircraft
+Horizon reference
+- climb angle $\gamma$: horizon -> airspeed
+- angle of attack $\alpha$: airspeed -> aircraft
+- pitch angle $\theta$: horizon -> aircraft
+
+$\theta = \alpha + \gamma$
+
+Top view (angles in clock direction):
+- sideslip angle $\beta$: aircraft -> airspeed
+- course $\chi$: north -> airspeed
+- heading $\psi$: north -> aircraft
+
+Moments:
+- $M$ moment around Y axis, pitching moment
+  positive pitching moment with nose up
+- $L$ moment around X axis
+- $N$ moment aroung Z axis
+
+Lift formula:
+
+$L = C_L \frac{1}{2} \rho V^2 S$
+
+Coefficient only depends on shape and angle of attack
+*** Stability
+Static stability
+- positive (self-stabilizing)
+- neutral
+- negative (unstable)
+
+Dynamic stability even if statically stable
+- positive (damped)
+- neutral (oscillation will keep amplitude)
+- negative (oscillation will increase)
+
+Integrators in the control loop, makes control harder
+- mode 1: control speed, int -> x
+- mode 2: control accelleration, int -> v -> int -> x
+- mode 3: control change of acceleration, int -> a -> int -> v -> int ->x
+*** Longitudal stability
+- upward turbulence: $\Delta \alpha > 0$
+- to get aircraft stable again, need $\Delta C_m < 0$
+
+$C_{m_\alpha} = \frac{dC_m}{d\alpha} < 0$
+
+- tail of aircraft can be pitched up with a trim wheel $i_h$
+- trim used to get the total moment at center of gravity to zero
+- downwash angle of tail $\epsilon$ slightly less
+
+$\alpha_h = \alpha + i_h - \epsilon$
+
+$\alpha_h$ : angle of attack at tail surface
+$\alpha$: angle of attack at main wing
+$i_h$: trim angle of tail surface
+$\epsilon$: downwash angle due main wing changing the airflow direction slightly
+
+$\frac{d\alpha_h}{d\alpha} = \frac{d}{d\alpha}(\alpha + i_h - \epsilon) = 1 - \frac{d\epsilon}{d\alpha}$
+
+Aerodynamic centre:
+- The point around whiche there is no change in moment due to a change
+  in the angle of attack
+- The moment stays constant for changing $\alpha$ at aerodynamic centre
+- Lift might change due to angle of attack change
+- nose up: positive moment
+
+[[./longitudal-stability-1.png]]
+
+Weight/Lift equation in equilibrium:
+
+$W = L_{wb} + L_H = L$
+
+Moment equation in equilibrium:
+
+$\sum M_{tot} = M_{ac} + L_{wv} \cdot leg - L_H \cdot (l_H - l_{cg})$
+
+$\sum M_{tot} = M_{ac} + L \cdot l_{cg} - L_H l_H = 0$
+
+$C_m = \frac{M}{\frac{1}{2} \rho V^2 S c}$
+
+$c$: average court, wing area divided by span
+
+$C_m = C_{mac} + C_L \frac{l_{cg}}{c} - \frac{C_{L_H} \frac{1}{2} \rho V^2 S_H l_H}{\frac{1}{2} \rho V^2 S c}$
+
+$C_m = C_{mac} + C_L \frac{l_{cg}}{c} - C_{L_H} \cdot V_H$ with
+
+$V_H = \frac{S_H l_H}{S\cdot c}$ tail volume
+
+$\frac{d C_m}{d \alpha} = 0 + \frac{dC_L}{d \alpha} \cdot \frac{l_{cg}}{c} - \frac{dC_{LH}}{d \alpha} \cdot V_H$
+
+$C_{m_\alpha} = a \cdot \frac{l_{cg}}{c} - a_t (1 - \frac{d\epsilon}{d\alpha}) V_H < 0$
+
+$a\frac{l_{cg}}{c} < a_t ( 1 - \frac{ d\epsilon} {d \alpha} ) V_H$
+
+Total definition of longitudial stability:
+
+$\frac{l_{cg}}{c} < \frac{a_t}{a} ( 1 - \frac{d \epsilon}{d \alpha} ) V_H$
+
+when left and right part are equal: neutral point
+$V_H$ is design parameter, it includes tail surface, distance to tail.
+
+$V_H = \frac{S_H l_h}{S \cdot c}$
+
+distance between neutral point and center of gravity is called static
+margin. Can be changed by moving centre of gravity (all run to the
+front of an aircraft). Static margin should be positive. This is true
+for conventional aircraft. For canard aircraft there are some changes.
+
+*** Aircraft oscillations
+Phugoid
+- up down movement
+- period: 30 sec - several minutes
+- low or no damping
+- exchange kinetic and potential engergy
+- modern airliners: low drag, low damping
+
+Short period
+- preriod: 2-5 seconds
+- reaction on disturbance
+- modern airliners: high damping
+
+Dutch roll
+- left right swing
+- little damped
+
+Spiral
+
+Aperiodic roll
+- result of vertical tail on top
+** Lecture 7: Propulsion introduction
+*** Intro
+$V_0$: speed the air enters the engine, airspeed
+$V_J$: exit speed
+
+$V_j > V_0$ => thrust
+
+Momentum
+$I=mV$
+
+$F = \frac{dI}{dt} = \frac{d(mV)}{dt} = \dot{m}\Delta V$
+
+$T = \dot{m}(V_j - V_0)$
+
+$\dot{m}$: Mass Flow in kg/s
+
+$V_j - V_0$: speed change (m/s)
+
+Engine types:
+- human-powered
+- electric
+- airbreathing engines
+  - prop
+  - jet
+- rocket
+
+*** Airbreathing engines
+Piston engine
+- piston moves
+- buring fuel causing pressure
+- causes piston to move
+
+$F = p \cdot A$
+
+$A$: area of piston
+$F$: force
+$p$:  pressure on piston
+
+$W = F \cdot s$
+
+$W$ work
+$s$ travelled way
+
+$W = F \cdot \Delta x$
+$W = p A \cdot \Delta x$
+$W = p \cdot \Delta V$
+
+$V$ Volume
+
+$W = \int p d V$
+
+Cycles:
+- Intake
+- Compression
+- Combustion
+- Expansion
+- Exhaust
+
+Area on p/V graph equals to amount of Work W
+
+Aviation piston engines 
+- 2 stroke engines *obsolete*
+- 4 stroke engines *common*
+- wankel engine *new*
+- diesel engine *new*
+
+Layouts:
+- in-line engines
+- radial engine
+- boxer engine
+- v-engine
+
+*** Propeller theory
+Convert shaft energy into propulsive energy
+
+Increase efficiency
+- counter-rotation
+- variable pitch
+- ducted fan
+
+$V = \omega r$
+
+$\omega$: rad/s
+
+Useful force: T thrust
+Loss: S side force (like drag)
+
+Propeller pitch:
+- speed varies
+- angle of attack needs to vary as well
+- variable twist
+- adjustable pitch to accomodate different air speed
+
+Propeller power
+
+Work performed: $W = T \Delta s$ [J] = [Nm]
+
+Power available: $P_a = \frac{T\Delta s}{\Delta t} = T \cdot V$ [J/s] = [W]
+
+Brake (shaft) power: $P_{br}$
+
+Propulsive efficiency: $\eta = \frac{P_a}{P_{br}} = \frac{T V}{P_{br}}$
+
+$V$ is speed of the aircraft here
+
+*** Jet engines
+- continuous combustion
+- intake -> compressed -> heated -> exapanded -> exhaust
+
+Ramjet:
+- air compressed due to airspeed
+- not very efficient
+
+Turbofan:
+- compressor
+- more compression
+- more thrust due to move pV area
+
+Turboprop/turboshaft
+- turbine connected to propeller via gearbox
+- loose some energy due to gearbox
+- propeller more efficient than jet engine
+- also used for helicopters
+
+Turbofan
+- extra fan in front of turbine
+- some cold air bypasses turbine
+
+Bypass ratio
+
+$Bypass ratio B = \frac{Bypass airflow (cold)}{Core airflow (hot)} = \frac{\dot{m_c}}{\dot{m_h}}$
+
+- more cold air
+- less hot aur
+
+Propulsive efficiency
+
+In: $\frac{1}{2} \dot{m} V_0^2$
+
+Out: $\frac{1}{2} \dot{m}V_j^2$
+
+Jet Power: $P_j = \frac{1}{2} \dot{m} ( V_j^2 - V_0^2)$
+
+Jet thrust: $T = \dot{m}(V_j - V_0)$
+
+Power available: $P_a = T V_0$
+
+Jet efficiency: $\eta_j = \frac{P_a}{P_j} = \frac{ T V_0} { \frac{1}{2} \dot{m} (V_j^2 - V_0^2) }$
+
+Jet efficiency: $\eta_j = \frac{2V_0}{V_0 + V_j} = \frac{2}{1 + V_j/V_0}$
+
+Efficiency:
+- more mass flow
+- lower exhaust speed
+- much higher propulsive efficiency
+- mixing of air also decreases noise level
+
+Two or four engines:
+- ETOPS: Extended Twin OperationS
+- "engines turning or passengers swimming"
+- due to higher reliability of modern engines
+- twin engines restricted to maximum diversion time
+- crossing some parts of atlantic and pacific ocean and the poles
+  still restricted to four engine aircrafts
+
+Future:
+- even bigger engines
+- turboprops, greener but noisier
+- scramjet? not very efficient, but lower drag to outer atmosphere
+  supersonic combustion ram jet -> scramjet
+- specialization
+
+*** Water Rocket
