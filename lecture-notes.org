@@ -1,15 +1,14 @@
 #+STARTUP: latexpreview
 #+STARTUP: indent
+#+TITLE: Aeronautical Engineering
 
-* Aeronautical Engineering
-
-** Lecture 1: Introduction and Ballooning
-
-*** Gas Law
+** Week 1
+*** Lecture 1: Introduction and Ballooning
+**** Gas Law
 
 *Base Formulas*
 
-$p V = n R  T$
+$$p V = n R  T$$
 
   p: pressure PA
   V: Volume m^3
@@ -30,9 +29,9 @@ $m = n M$ => $n = \frac{m}{M}$
 
 *Combine to eliminate V and n*
 
-$n = \frac{m}{M}$
+$$n = \frac{m}{M}$$
 
-$p \frac{m}{\rho} = \frac{m}{M} * R * T$
+$$p \frac{m}{\rho} = \frac{m}{M} * R * T$$
 
 $\frac{p}{\rho} = \frac{R}{M} T$ => $p = \rho \frac{R}{M}T$
 
@@ -44,7 +43,7 @@ R: specific gas constant
 
 $R_{specific} = 287.00 \frac{J}{kg K}$ for air
 
-*** Ballooning
+**** Ballooning
 
 Volume of air/gas.
 
@@ -84,9 +83,8 @@ to get same amount of lift as helium ballon:
 
 $\frac{\Delta T}{T + \Delta T} = 6/7$ => $\Delta T = 6 T$ => lift of hot air usually much smaller then helium
 
-
-** Lecture 2: The Standard Atmosphere
-*** standard athmosphere I
+*** Lecture 2: The Standard Atmosphere
+**** standard athmosphere I
 as a function of altitude we need:
 - pressure p [Pa]
 - air density $\rho$ [kg/m^3]
@@ -119,7 +117,7 @@ $p_0 = 101325\ Pa$
 $T_0 = 15^{\circ} C = 288.15K$
 $\rho_0 = 1.225 \frac{kg}{m^3}$
 
-*** standard athmosphere II
+**** standard athmosphere II
 $dp = - \frac{p}{R T}\ g\ dh$
 $\frac{1}{p}dp = - \frac{g}{RT} dh$
 
@@ -152,7 +150,7 @@ $\frac{p_1}{p_0} = e^{- \frac{g}{R T} (h_1 - h_0)}$
 
 $\frac{\rho_1}{\rho_0} = e^{- \frac{g}{R T} (h_1 - h_0)}$
 
-*** Geopotential and Geometric altitude
+**** Geopotential and Geometric altitude
 - geopotential altitude h , assumption g0 = constant
 - geometric altitude h_g, g varies
 
@@ -169,7 +167,7 @@ $\int_0^h dh = \int_0^{h_g} \frac{R_e^2}{(R_e + h_g)^2} dh_g$
 $h = \frac{R_e}{R_e + h_g} h_g$
 
 $R_e = 6378000m = 6378km$
-** Lecture 3: How aircraft fly
+*** Lecture 3: How aircraft fly
 Forces on aircraft:
 - lift L <=> weight W
 - thrust T <=> drag D
@@ -177,7 +175,7 @@ Forces on aircraft:
 $L=W$
 $T=D$
 
-*** Lift
+**** Lift
 
 $L = C_L \frac{1}{2}\rho V^2 S$ in Newton!!!
 
@@ -204,7 +202,7 @@ Take off and landing:
 - flaps back of wing
 - slats front of wing
 
-*** Drag
+**** Drag
 
 $D = C_D \frac{1}{2} \rho V^2 S$
 
@@ -216,12 +214,22 @@ $\rho$   = Air density [kg/m^3]
 $V$  = Velocity [m/s]
 $S$  = Wing surface area [m^2]
 
+$C_D(C_L) = C_{D_0} + \frac{C_L^2}{\pi A e}$
+
+e: Oswald efficiency number
+A: aspect ratio
+
+$A = \frac{b^2}{S} = \frac{b}{c}$
+
+b: wingspan
+S: wing area
+c: chord
 
 As angle of attack increases, $C_D$ increases as well as $C_L$.
 - maximum $C_L/C_D$ ratio is called glide ratio
 - for optimum flight, stay close to optimum glide ratio
 
-*** Thrust and Weight
+**** Thrust and Weight
 
 Engine types:
 - piston engines
@@ -244,18 +252,20 @@ Fly regimes:
 - Payload
 - Fuel
 
-** Lecture 4: Cockpits and Navigation
-*** Cockpits
+** Week 2
+*** Lecture 4: Cockpits and Navigation
+**** Cockpits
 - 747 (1970). three persons in cockpit
 - 747-400. glass cockpit
 - circuit breakers to switch off individual systems
 - mode control panel, central, auto pilot, height, direction
-*** Instruments
+**** Instruments
 Units:
 - 1 nm = 1852 m nautical miles
 - 1 ft = 0.3048 m altitude
 - 1 kts = 1 nm/h = 1852m/3600s = 0.51444 m/s
 - 1 ft/min = 0.3048m/60s = 0.00508 m/s (1500 ft/min regular speed)
+- 0°C = 273.15 K
 - mach:
 
 $M = \frac{V_{TAS}}{a}$ a = speed of sound
@@ -293,7 +303,7 @@ $V_{TAS} = \sqrt{\frac{\rho_0}{\rho}} V_{EAS}$
 
 39286.90249007389
 
-*** Instruments II
+**** Instruments II
 Measuring altitude
 - static pressure
 - altitude: relative to sea level QNH
@@ -316,8 +326,8 @@ What's our heading
 - compass + deviation = magnetic
 - magnetic + variation = true
 - heading + wind = track
-** Lecture 5: Structural Concepts
-*** Early structures
+*** Lecture 5: Structural Concepts
+**** Early structures
 
 | Period     | Structures                 | Materials          |
 |------------+----------------------------+--------------------|
@@ -328,12 +338,12 @@ What's our heading
 | 1948-today | Pressure cabin             | Improved Al-alloys |
 | 1980-today | Composite structures       | Carbon fibres      |
 
-*** From truss to beam
+**** From truss to beam
 
 - I-Beam
 - Flanges
 
-*** Shell structures
+**** Shell structures
 - Boeing and Dougles made first all metal aircraft 1935
 - Rivets for joins
 - load bearing skins
@@ -355,7 +365,7 @@ Principal structure elements (PSE)
 - plastic behaviour, deformation permanent
 - higher safety factor for composite than for metal alloy
 
-*** Fatigue
+**** Fatigue
 Force equilibrium on hull:
 
 $\Delta p = p_2 - p_1$
@@ -392,8 +402,8 @@ Location: Fuselage
 - Pressurisation (once per flight)
 - Wing loads
 
-** Lecture 6: Stability and Control
-*** Controls
+*** Lecture 6: Stability and Control
+**** Controls
 Wing warping
 Control surfaces
 
@@ -408,7 +418,7 @@ Fly by wire:
 - no direct connection between stick and control surfaces
 - computer inbetween
 
-*** Angles and Axes
+**** Angles and Axes
 Body axes
 - Xb forward direction axes
 - Yb wing on the right side
@@ -456,7 +466,7 @@ Lift formula:
 $L = C_L \frac{1}{2} \rho V^2 S$
 
 Coefficient only depends on shape and angle of attack
-*** Stability
+**** Stability
 Static stability
 - positive (self-stabilizing)
 - neutral
@@ -471,7 +481,7 @@ Integrators in the control loop, makes control harder
 - mode 1: control speed, int -> x
 - mode 2: control accelleration, int -> v -> int -> x
 - mode 3: control change of acceleration, int -> a -> int -> v -> int ->x
-*** Longitudal stability
+**** Longitudal stability
 - upward turbulence: $\Delta \alpha > 0$
 - to get aircraft stable again, need $\Delta C_m < 0$
 
@@ -505,7 +515,7 @@ $W = L_{wb} + L_H = L$
 
 Moment equation in equilibrium:
 
-$\sum M_{tot} = M_{ac} + L_{wv} \cdot leg - L_H \cdot (l_H - l_{cg})$
+$\sum M_{tot} = M_{ac} + L_{wb} \cdot l_{cg} - L_H \cdot (l_H - l_{cg})$
 
 $\sum M_{tot} = M_{ac} + L \cdot l_{cg} - L_H l_H = 0$
 
@@ -539,7 +549,7 @@ margin. Can be changed by moving centre of gravity (all run to the
 front of an aircraft). Static margin should be positive. This is true
 for conventional aircraft. For canard aircraft there are some changes.
 
-*** Aircraft oscillations
+**** Aircraft oscillations
 Phugoid
 - up down movement
 - period: 30 sec - several minutes
@@ -560,8 +570,9 @@ Spiral
 
 Aperiodic roll
 - result of vertical tail on top
-** Lecture 7: Propulsion introduction
-*** Intro
+** Week 3
+*** Lecture 7: Propulsion introduction
+**** Intro
 $V_0$: speed the air enters the engine, airspeed
 $V_J$: exit speed
 
@@ -578,6 +589,12 @@ $\dot{m}$: Mass Flow in kg/s
 
 $V_j - V_0$: speed change (m/s)
 
+Mass flow calculation via Volume
+
+$\dot{m} = \rho_{air} \cdot A \cdot V_{TAS}$
+
+area: $A = \pi r^2$ or similar
+
 Engine types:
 - human-powered
 - electric
@@ -586,7 +603,7 @@ Engine types:
   - jet
 - rocket
 
-*** Airbreathing engines
+**** Airbreathing engines
 Piston engine
 - piston moves
 - buring fuel causing pressure
@@ -632,7 +649,7 @@ Layouts:
 - boxer engine
 - v-engine
 
-*** Propeller theory
+**** Propeller theory
 Convert shaft energy into propulsive energy
 
 Increase efficiency
@@ -665,7 +682,7 @@ Propulsive efficiency: $\eta = \frac{P_a}{P_{br}} = \frac{T V}{P_{br}}$
 
 $V$ is speed of the aircraft here
 
-*** Jet engines
+**** Jet engines
 - continuous combustion
 - intake -> compressed -> heated -> exapanded -> exhaust
 
@@ -732,4 +749,1644 @@ Future:
   supersonic combustion ram jet -> scramjet
 - specialization
 
-*** Water Rocket
+**** Water Rocket
+*** Lecture 8: Materials
+**** Materials
+What is a material
+- no clear definition
+- approximated by matter or substance
+- has properties (resistance, density, strength)
+- without shape
+
+Relation structure and materials
+- materials are retrieved from ores or somehow else made
+- semi-finished parts
+- structural elements
+- structure
+
+Overview of materials
+- metals
+- polymers (inadequate mechanical properties)
+- ceramics (too brittle)
+- composites
+- only metal and composites are used in aerospace
+
+**** Aerospace Materials
+Metal conversion
+- ore
+- retrieve
+- purify
+- alloy, increase properties of metal, e.g. stronger
+- semi-fnished part
+- manufacturing process
+- final product
+
+Metal (alloy) properties
+- isotropic. properties are independent from the directions the
+  material is tested
+- can be strengthened
+- plastic behaviour, can melt
+- good processibility
+- often low cost
+
+Material properties
+- fair comparison, take dimensions into account
+
+Stress $= \sigma = \frac{F}{A}$
+
+Strain $= \epsilon = \frac{\Delta L}{L}$
+
+| Metal (alloy)         | Carbon steel | HS Steel | Pure Aluminium |
+|-----------------------+--------------+----------+----------------|
+| Density [kg/m^3]      |          7.8 |      7.8 | 2.7            |
+| E-modulus [kN/mm^2]   |          207 |      207 | 69             |
+| Yield strength [Mpa]  |          375 |     1620 | 34             |
+| Failure Strengs [Mpa] |          590 |     1760 | 90             |
+| Max Strain [%]        |           28 |       12 | 40             |
+
+Specific property = $\frac{Property}{Density}$
+
+Polymers
+- technically not interesting as pure materials
+- macro-molecular substances
+- thermoplastics (softening is reversible, one component)
+- thermosets (curing is irreversible, multiple components)
+
+Polymer Characteristics
+- isotropic
+- low strength & stiffnes
+- huge variety
+- plastic and flow melting
+- good processing
+- low cost
+
+Composites
+- fibre reinforced polymers: polymer + fibres
+  - fibres: glass, carbon, aramid, dyneema
+  - short, long and continuous fibres
+- hybrid materials
+  - GLARE: composite + metal sheets
+
+Principles of composites
+- fibres (strong & stiff) embedded in resin
+- resin for support and protection
+- anisotropic behaviour (direction of fibre important)
+
+Composite properties
+- anisotropic (orientation)
+- layered structure (laminate)
+- high strength and stiffness in fibre direction
+- low density but often costly
+- no plasticity
+- good processibility
+  + prepregs
+  + draping in moulds
+
+Composite parts
+- Laminates
+  - shell structure
+  - thin walled
+- Sandwich
+  - two laminates
+  - lightwieght core
+  - core and cover
+  - core can have a honycomb
+  - core can be foam
+  - high bending stiffness
+- Used in Boeing 787 and Airbus A350 for primary structures
+
+**** Production
+Load-carrying capacity depends on
+- design/shape
+- material
+- production techniques
+
+Metal production
+- casting
+- cutting
+- forming
+
+Composite production
+- lay-up & curing
+- filament winding
+
+**** Exploring the limits
+- X-planes program, experimental planes
+- Bell X1, fly supersonic
+- X-15, Mach 6.72, rocket engine, 107.9 km altitude
+- X-29, forward swept wing, canards, made possible by composite, metal
+  would not have been possible
+
+Mach number $M = \frac{V}{a}$
+Speed of sound $a = \sqrt{\gamma
+ RT}$
+
+| Subsonic   | M < 0.8       |
+| Transsonic | 0.8 < M < 1.2 |
+| Supersonic | 1.2 < M < 5   |
+| Hypersonic | M > 5         |
+
+Subsonic
+- sound moves faster than object
+- no coalesce of waves (sound or pressure)
+- doppler effect
+
+Speed equal to sound
+- coalescence of waves
+- shock wave/pressure step
+- sound barrier
+- higher drag on the aircraft
+
+Supersonic
+- coalescences of waves
+- shock wave /pressure step
+- mach angle $\mu$
+
+$sin \mu = \frac{a\Delta t}{V\delta t} = \frac{a}{V} = \frac{1}{M}$
+
+$\mu = sin^{-1}(\frac{1}{M})$
+
+Shock waves
+- reduction of lift
+- increase in (wave) drag
+
+Improve supersonic flight
+- thin airfoils, extend subsonic flow, increase critical Mach number
+  (3-5% of chord length)
+- wing sweep, reduces the drag coefficient at supersonic speed, some
+  aircraft can change sweep during flight
+
+**** The limits of speed
+- propelling power
+- higher speed -> higher drag
+- friction creates heat
+- material properties degrade at high temperatures
+- steel alloys or titanium alloys being used
+- SR-71 leading edges > 400°C
+- concorde: max M < 2.02
+
+Space materials
+- high temperature loading (reentry)
+- specific atmosphere (radiation)
+- reentry temperature at 2000°C
+
+Space shuttle
+- TPS thermal protection systems
+- Up to 1650°C during reentry
+- black tiles, silica materials, outside carbon layer
+
+Current limits:
+- Speed record: Mach 6.72 (X-15)
+- Altitude record: 112 km (SpaceShipOne)
+
+*** Lecture 9: Special vehicles
+
+Three principles:
+- being lighter than air (ballon)
+- push air down (wing)
+- push something else down (rocket)
+
+Gound effect vehicles
+- similar to hovercraft
+- downwash
+- close to ground downwash can't escape
+- increase in lift of up to 40%
+- every aircraft affected close to ground
+- altitude less than the span of the aircraft (rule of thumb)
+
+Russian see planes
+- experimental development program
+- caspian sea
+
+**** Helicopters
+- rotor has two functions: thrust and lift
+- rotor also functions like wing at speed
+- angle of attack changes depening on rotor blade position
+- pedals control tail rotor
+- hard to fly due to connected controls
+- swashplate
+
+Tail rotor alternatives:
+- NOTAR, replace tail rotor with jet stream
+- coaxial rotors in opposite direction
+- two rotors in opposite direction
+- ornicopter
+
+Engine failure
+- gliding possible with helicopter
+- autorotation
+- used for emergency landing
+- needs altitude or speed
+
+Tilt rotor aircraft
+- V-22 Osprey
+- difficult to model and perform transition
+
+**** Exotic vehicles
+Vertical take off and landing
+- BAe Sea Harrier
+- McDonnell Douglas AV-8B
+- Joint Strike Fighter F-35 Lightning
+
+JATO rockets
+- rocket addition to reduce take off runway
+- jet assisted take off (JATO)
+
+Jetpacks
+- very unstable
+- problem of center of gravity vs center of lift
+- center of lift needs to be placed above center of gravity
+
+UAV
+- unmanned/uninhabitated aerial verhical UAV
+- RPA remotly piloted aviation systems
+- original: one man controlling multiple aircraft
+- current: 4 man controlling 1 UAV
+- UAV crash 100x more than normal aircraft
+- UCAV unmanned combat areal vehicle (future)
+
+Hypersonic aircraft
+- to australia in 5 hours
+- current problem: capturing NO_x
+- Astrox: in 2 hours to either side of the world
+
+**** Personal air vehicles
+- point to point air travel
+- on-demand flying (JetJet)
+- Air taxi on-mdeand and individual
+- Skycar - ultimate mobility
+- Muller SkyCar
+- PAL-V gyrocopter and motorcycle combination, exists, flying since 2012
+- Terrafugia, MIT, plane car combination
+
+Small vehicles
+- Delfly
+- Delfly nano
+
+Green aircraft
+- one wing body
+- electricity
+- Solar Impulse
+** Week 4
+*** Lecture 1: Fundamentals of Aerodynamics
+**** Fundamental Equations 1
+Pressure
+    $p = \lim\limits_{dA \to 0} \left(\frac{dF}{dA}\right) \left[\frac{N}{m^2}\right]$ or Pa
+
+Density
+    $\rho = \lim\limits_{dv \to 0} \left(\frac{dm}{dv}\right) \left[\frac{kg}{m^3}\right]$
+
+Temperature
+    $KE = \frac{3}{2}kT$
+
+    Measure of the average kinetic energy of the particle in the gas.
+
+    $k = 1.38 \cdot 10^{-23}\frac{J}{K}$ Boltzmann constant
+
+Equation of state
+
+    $p = \rho R T$
+
+    $R = 287.0 \frac{J}{kg \cdot K}$ gas constant
+
+Standard conditions
+
+    $p_s = 1.01325 \cdot 10^5 \frac{N}{m^2} = 1 atm$
+
+    $\rho_s = 1.225\frac{kg}{m^3}$
+
+    $T_s = 288.15 K$
+
+    $0^ \circ C = 273.15 K$
+
+Specific volume
+
+    $v = \frac{1}{\rho}$      volume per 1 kg (I guess)
+
+    $p v = RT$   alternative equation of state
+
+Velocity and streamlines
+
+    velocity in point B is the velocity of an infinitesimally small
+    fluid element a sweeps through B.
+
+    $\vec{v} = \frac{d\vec{s}}{dt}$
+
+Velocity and streamlines (s)
+- airfoil
+- air above and below
+- dividing point, stagnation point (V = 0)
+- stagnation pressure, total pressure
+
+Aerodynamic forces
+- friction force as air moves over the surface
+- airfoil object displaces the fluid, pressure forces on the surface
+
+**** Fundamental Equations 2
+
+Continuity equation for steady flow
+
+    $\dot{m}_{in} = \dot{m}_{out}$
+
+Continuity equation
+
+    Velocity $V$
+    Area $A$
+    Timespan $dT$
+
+    $m = \rho \cdot Volume$
+
+    $Volume = V \cdot dt \cdot A$
+
+    $\dot{m} = \frac{\rho A V dt}{dt} = \rho A V$
+
+    $\rho A V = constant$
+
+    $\rho_1 A_1 V_1 = \rho_2 A_2 V_2$
+
+    $\rho$ and V are mean values over the area
+
+For incompressible flow (same $\rho$)
+
+    $A\cdot V = constant$
+
+Euler equation
+
+    Newton's second law: $F = m \cdot a$
+
+    The force in x-direction
+
+    $F = pdydz - \left(p + \frac{dp}{dx}dx \right) dydz$
+
+    $F = - \frac{dp}{dx}dxdydz$ Force on fluid element due to pressure
+
+    The mass m of the fluid element is
+
+    $m = \rho \cdot Vol = \rho 
+dxdydz$
+
+    Acceleration a of the fluid element:
+
+    $a = \frac{dV}{dt} = \frac{dV}{dx} \frac{dx}{dt} = \frac{dV}{dx}V$
+
+    $- \frac{dp}{dx}(dxdydz) = \rho (dxdydz) V \frac{dV}{dx}$
+
+    $dp = - \rho V dV$ (Euler equation)
+
+Keep in mind:
+- gravity neglected
+- viscosity neglected
+- steady flow
+- flow may be compressible
+
+**** Bernoulli's principle
+Integrating the Euler equation along a streamline
+
+$$dp + \rho V dV = 0$$
+
+$$\int_{p_1}^{p_2}dp + \int_{V_1}^{V_2} \rho V dV = 0$$
+
+$$(p_2 - p_1) + \rho \left(\frac{1}{2} V_2^2 - \frac{1}{2}V_1^2 \right) = 0$$
+
+$$p1 + \frac{1}{2} \rho V_1^2 = p_2 + \frac{1}{2} \rho V_2^2$$
+
+$$p + \frac{1}{2} \rho V^2 =$$ constant along a streamline
+static pressure + dynamic pressure = total pressure
+
+=> Bernoulli's principle
+
+Pitot tube
+
+$$V=\sqrt{\frac{2q}{\rho}}$$
+*** Lecture 2: Compressibility
+**** Thermodynamics
+
+- System, boundary, surroundings
+- Change to internal energy e can be from work done on the system or
+  heat change
+
+First law of thermodynamics
+
+    $e$: energy
+    $\delta q$: heat change
+    $\delta w$: work done on or from system
+
+    $$de = \delta q + \delta w $$
+
+Work done on the system
+
+    work = force * distance
+    work = pressure * area * distance
+    work = $p \cdot dA \cdot s$
+
+    $$\partial w = \int_A pdAs = p \int_A sdA$$
+
+    $$\partial w = -pdv$$ (for reversible process)
+
+    $dv$: change in volume
+
+    note negative sign, decreasing volume created by work to the system
+
+
+  hence:
+
+    $$de = \partial q - pdv$$
+
+Enthalpy h
+
+    Measure of the total energy of the system
+
+    $$ h = e + pv $$
+
+    $$ dh = de + d(pv) $$
+
+    $$ dh = de + pdv + vdp $$
+
+    $$ de = \partial q - pdv $$
+
+  hence:
+
+    $$ dh = \partial q + vdp $$
+
+Processes
+- constant pressure process
+- constant volume process
+
+Specific heat
+
+    $$ c = \frac{\partial q}{d T} $$    
+
+    c depends on type of process
+
+    $$ c_v = \left( \frac{\partial q}{dT}\right) $$
+
+    $$ c_p = \left( \frac{\partial q}{dT} \right) $$
+
+Constant volume process (dv = 0)
+
+    $$de = \partial q = c_vdT$$
+
+    $$e = c_v T$$ (e=0 at T=0)
+
+
+Constant pressure process (dp = 0)
+
+    $$dh = \partial q = c_pdT$$
+
+    $$h = c_pT$$ (integrated with h=0 at T=0)
+
+Summary
+
+    $$de = c_v dT$$
+
+    $$dh = c_p dT$$
+
+    $$e = c_v T$$
+
+    $$h = c_p T$$
+
+    $$c_v = 720 \frac{J}{kg \cdot K}$$ for air and T <600K
+    $$c_p = 1008 \frac{J}{kg \cdot K}$$
+
+**** Isentropic flows
+Definitions:
+- adiabatic process: no heat addition or subtraction, $\partial q = 0$
+- reversible process: no frictional or dossopative effects
+- isentropic process: both adiabatic and reversible
+
+For isentropic flow of a perfect gas:
+
+    $$de = \partial q - pdv$$
+
+    $$\partial q = 0 \Rightarrow - pdv = de = c_v dT$$
+
+    $$\partial q = dh - vdp$$
+
+    $$\partial q = 0 \Rightarrow dh = vdp = c_p dT$$
+
+Ratio of specific heats
+
+    $$\frac{-pdv}{vdp} = \frac{c_v}{c_p} \Rightarrow \frac{dp}{p} = -\left(\frac{c_p}{c_v}\right) \frac{dv}{v}$$
+
+Now define the ratio pf specific heats:
+
+    $$\gamma = \frac{c_p}{c_v}$$
+
+    $$\gamma = 1.4$$ for air
+
+    $$\Rightarrow \frac{dp}{p} = -\gamma\frac{dv}{v}$$
+
+Isentropic flow:
+
+    $$\ln \left( \frac{p_2}{p_1} \right) = - \gamma \ln 
+\left( \frac{v_2}{v_1} \right)$$
+
+    $$\left(\frac{p_2}{p_1}\right) = \left(\frac{v_2}{v_1}\right)^{-\gamma}$$
+
+
+Since $v = \frac{1}{\rho}$:
+
+    $$\frac{p_2}{p_1} = \left(\frac{\rho_2}{\rho_1}\right)^{\gamma}$$ (only for insentropic flow)
+
+Using $p = \rho R T$:
+
+    $$\left(\frac{p_2}{p_1}\right)^{1-\gamma} = \left( \frac{T_1}{T_2} \right)^\gamma$$
+
+    $$\frac{p_2}{p_1} = \left(\frac{\rho_2}{\rho_1}\right)^\gamma = \left( \frac{T_2}{T_1} \right)^{\frac{\gamma}{\gamma - 1}}$$
+
+    only relevant for compressible flow
+
+Energy equation
+
+    $$h + \frac{1}{2} V_2 = constant $$
+
+    $$c_pT + \frac{1}{2} V^2 = constant$$
+
+Summary for steady, frictionless, incompressible flow:
+
+    $$A_1 V_1 = A_2 V_2$$     continuity equation
+
+    $$p_1 + \frac{1}{2} \rho V_1^2 = p_2 + \frac{1}{2} \rho V_2^2$$    Bernoulli's equation
+
+    $$p_1 = \rho_1 R T_1$$     $$p_2 = \rho_2 R T_2$$  equation of state
+
+
+Summary for steady,  isentropic, compressible flow
+
+    $$\rho_1 A_1 V_1 = \rho_2 A_2 V_2$$            continuity equation
+
+
+    $$\frac{p_2}{p_1} = \left(\frac{\rho_2}{\rho_1}\right)^\gamma = \left( \frac{T_2}{T_1} \right)^{\frac{\gamma}{\gamma - 1}}$$    isentropic relations
+
+    $$c_pT_1 + \frac{1}{2} V_1^2 = c_pT_2 + \frac{1}{2} V_2^2$$    energy equation
+
+    $$p_1 = \rho_1 R T_1$$     $$p_2 = \rho_2 R T_2$$  equation of state
+
+**** Speed of sound
+Continuity eqation applied to sound wave
+
+    $$a
+ = -\rho \frac{da}{d\rho}$$
+
+Momentum equation
+
+    $$a^2 = \frac{dp}{d\rho}$$
+
+    - no heat addition
+    - friction negligible small
+    => isentropic
+
+Speed of sound
+
+    $$a = \sqrt{\gamma RT}$$
+
+    - speed of sound in perfect gas only depends on T
+
+Mach number
+
+    $$M = \frac{V}{a}$$
+
+| M        |            |
+|----------+------------|
+| < 0.8    | subsonic   |
+| 1        | sonic      |
+| around 1 | transonic  |
+| > 1      | supersonic |
+| > 5      | hypersonic |
+
+Second form of isentropic relations when V_0 = 0
+
+    $$\frac{T_0}{T_1} = 1 + \frac{\gamma - 1}{2}M_1^2$$
+
+    $$\frac{p_0}{p_1} = \left( 1 + \frac{\gamma -1}{2} M_1^2 \right)^\frac{\gamma}{\gamma -1}$$
+
+    $$\frac{\rho_0}{\rho_1} = \left( 1 + \frac{\gamma -1}{2} M_1^2 \right)^\frac{\gamma}{\gamma -1}$$
+
+**** Supersonic nozzles
+
+Compressibility
+- for M < 0.3 the change in density is less than 5%
+- for M < 0.3 flow considered incompressible
+    
+Area velocity relation
+
+    $$\frac{dA}{A} = (M^2 - 1) \frac{dV}{V}$$
+
+**** Supersonic wind tunnel
+
+Wind tunnel to get M=3
+
+Reservoir pressure, use second form of isentropic relations:
+
+    $$\frac{p_0}{p_1} = \left( 1 + \frac{\gamma -1}{2} M_1^2 \right)^\frac{\gamma}{\gamma -1}$$
+
+    $$p_0 = p_{ts} \left( 1 + \frac{\gamma -1}{2} M_{ts}^2 \right)^\frac{\gamma}{\gamma -1}$$
+
+    $$p_0 = 36.73 atm $$
+
+Reservoir temperature
+
+    $$\frac{T_0}{T_1} = 1 + \frac{\gamma - 1}{2}M_1^2$$
+
+    $$T_0 = T_{ts} \left(1 + \frac{\gamma - 1}{2}M_{ts}^2 \right)$$
+
+    $$T_0 = 288.15 \cdot \left(1 + \frac{1.4 - 1}{2}3^2 \right) = 806.82 K$$
+
+Test section flow speed
+
+    $$ M = \frac{V}{a} \Rightarrow  V = Ma$$
+
+    $$V_{ts} = M \sqrt{\gamma R T_{ts}}$$
+
+    $$V_{ts} = 3 \sqrt{1.4 \cdot 287 \cdot 288.15} = 1020.79 \frac{m}{s}$$
+
+Flow speed in the throat
+
+In the throat: M = 1 $$\Rightarrow V^* = a^*$$
+
+    $$a^* = \sqrt{\gamma R T^*}$$
+
+
+    $$T^* = T_0 \left(1 + \frac{\gamma - 1}{2}M^{*2}\right)^{-1}
+$$
+
+    $$T^* = 672.35 K $$
+
+
+Velocity in the throat
+
+     $$V^* = \sqrt{1.4 \cdot 287 \cdot 672.35} = 519.76 \frac{m}{s}$$
+
+Expansion ratio
+
+     $$\rho_{ts} A_{ts} V_{ts} = \rho^* A^* V^*$$
+
+     $$\frac{A_{ts}}{A^*} = \frac{\rho^* V^*}{\rho_{ts} V_{ts}}$$
+
+     $$\frac{\rho^*}{\rho_{ts}} = \left( \frac{T^*}{T_{ts}} \right)^{\frac{1}{\gamma -1}} = \left(\frac{672.35}{288.15}\right)^{\frac{1}{1.4-1}} = 8.32$$
+
+     $$\frac{A_{ts}}{A^*} = 8.32 * \frac{519.76}{1020.79} = 4.23$$
+*** Lecture 3: Viscous Flow
+**** Viscous flows
+- Osborne Reynolds (1842-1912)
+- Pipe flow experiment
+- Laminar/Turbulent Flow
+- Reynolds number
+
+  $$\mathtt{Re} = \frac{\rho \cdot V \cdot D}{\mu}$$
+
+  $\rho$: density of fluid (kg/m^3)
+  $V$: velocity (m/s)
+  $D$: linear dimension, diameter for pipe (m)
+  $\mu$: dynamic viscosity of the fluid (Pa*s or N*s/m^2 or kg(m*s))
+
+  At Re < 2300: laminar flow
+     Re > 4000: turbulent flow
+
+  Water at 20°C:
+  $\mu = 1.002 \cdot 10^{-3} \mathtt{Pa} \cdot \mathtt{s}$
+  $\rho = 998.2071 \frac{kg}{m^3}$
+
+  Air at 15°C:
+  $$\mu = 1.81 \cdot 10^{-5} \mathtt{Pa} \cdot \mathtt{s}$$
+
+- Ludwig Prandtl (1875-1953)
+- Boundary layer theory
+- Bernoulli's principle is for frictionless flow,
+  not valid in boundary layer
+
+**** The boundary layer on a flat plate
+
+- shear stress
+  $$\tau_w = \mu \frac{du}{dy}$$
+
+  $\mu$: dynamic viscosity of the fluid
+
+- local Reynolds number:
+
+  $$\mathtt{Re}_x = \frac{\rho_\infty V_\infty x}{\mu_\infty}$$
+
+- Laminar flow: Streamlines are smooth and regular, fluid element
+  moves smoothly along a streamline
+
+- Turbulent flow: Streamlines break up, fluid element moves in a
+  random, irregular way
+
+- Local boundary layer thickness at location x from leading edge is:
+
+  $$\delta = \frac{ 5.2 x}{\sqrt{\mathtt{Re}_x}}$$  => boundary layer develops parabolically
+
+- Total force: total pressure force + total friction force of the plate
+  plate is thin => no pressure force
+
+- Total friction drag:
+
+  $$D_f = \int_0^L \tau_w dx$$
+
+- Kinematic viscosity
+
+  $$v = \frac{\mu}{\rho}$$
+
+  $$\mathtt{Re}_L = \frac{V \cdot L}{v}$$      V: velocity L: length
+
+
+- Skin friction drag laminar flow
+
+  $$D_f = \frac{1.328 \cdot q_\infty \cdot L}{\sqrt{\mathtt{Re}_L}}$$
+
+  $$C_f = \frac{1.328}{\sqrt{\mathtt{Re}_L}}$$         skin friction coefficient on a flat plate
+  
+  only valid for low speed, incrompressible flow
+  reasonably accurate for high speed subsonic flow
+
+- Turbulent boundary layer 
+
+  $$\delta = \frac{0.37 x}{\mathtt{Re}_x^{0.2}}$$
+
+  $$C_f = \frac{0.074}{\mathtt{Re}_L^{0.2}}$$
+
+Laminar vs Turbulent:
+- for turbulent flow, C_f varies with L^-1/5
+- for laminar flow, C_f varies with L^_1/2
+- friction in a turbulent boundary layer is larger than in laminar flow
+
+**** Transition
+- critical Reynolds number where laminar flow goes turbulent
+- Recr ~ 500000 lower boundary in literature, but varies a lot
+
+- laminar -> transition -> turbulent:
+- Tollmien-Schlichting waves
+- Spanwise vorticity
+- 3D vortex breakdown
+- Turbulent spots
+- Fully turbulent flow
+
+- Oil drag method, black area indicates where transition to turbulent flow
+  has completed
+
+** Week 5
+*** Lecture 4: Pressure distribution and flow separation
+**** Pressure distributions
+Pressure coefficient
+
+    $$C_p = \frac{p - p_0}{\frac{1}{2} \rho V_0^2}$$
+
+    C_p at stagnation point = 1?
+
+**** Flow separation
+- Karman vortex street
+- Applying roughness to avoid laminar separation resulting lower drag
+- Higher Reynold numbers of an airfoil has favorable effect on lift and drag
+- E.g. 60000, 120000 and higher
+*** Lecture 5: Wing profiles
+**** Wings and airfoils
+
+Two dimensional situation, infinitely long airfoil
+
+Wing:
+    $$L = \frac{1}{2} \rho V^2 C_L S$$       Lift
+
+    $$D = \frac{1}{2} \rho V^2 C_D S$$      Drag
+
+    $$M = \frac{1}{2} \rho V^2 C_M Sc$$    Moment
+
+
+In two dimensional case, S is undefined. So define length as 1m and
+
+    $$S = c \cdot 1 = c$$
+
+Airfoil (note lower case subscript for coefficient):
+
+    $$C_l = \frac{L}{\frac{1}{2} \rho V^2 c}$$
+
+    $$C_d = \frac{D}{\frac{1}{2} \rho V^2 c}$$
+
+    $$C_m = \frac{M}{\frac{1}{2} \rho V^2 c^2}$$
+    
+Definitions:
+- angle of attack: angle between chord line and stream vector
+- lift L is perpendicular to stream vector
+- drag D is parallel to stream vector
+- moment M is positive nose up
+- moment is close to "quarter chord point" close to aerodynamic center,
+  where the moment doesn't change with varying angle of attack
+
+- C_l over C_d curve
+- tangient through 0 and curve shows maximum C_l/C_d ratio, design point C_l
+- moment coefficient is negative
+
+- NACA National Advisory Committee for Aeronautics (1915)
+- NACA 4 digit airfoil series, e.g. NACA 0012
+- NACA 6 digit airfoil series 1940s, more laminar flow, better lift/drag ratio
+
+- NASA National Aeronautic and Space Administration, successor of NACA 1958
+- LS series 1970s
+- NLF series 1980s
+
+**** Pressure distribution and compressibility correction
+
+Normal force accross airfoil per meter span
+
+    $$N = \int_{LE}^{TE} p_l \cos \theta ds - \int_{LE}^{TE} p_u \cos \theta ds$$
+
+    LE: leading edge
+    TE: trailing edge
+    p_l: force on lower surface
+    p_u: force on upper surface
+
+    with $$ds \cos \theta = dx$$:
+
+    $$N = \int_{0}^{c} p_l dx - \int_{0}^{c} p_u dx$$
+   
+
+    $$C_n = \frac{N}{\frac{1}{2} V^2_\infty c} = \frac{N}{q_\infty c}$$
+
+    with some more magic:
+
+    $$C_n = \int_0^1 (C_{pl} - C_{pu}) d \left(\frac{x}{c} \right)$$
+
+    For small angle of attack:
+
+    $$C_l \approx \int_0^1 (C_{pl} - C_{pu}) d \left( \frac{x}{c} \right)$$
+
+Prandtl-Glauert rule
+
+    $$C_p = \frac{C_{p,0}}{\sqrt{1 - M_\infty^2}}$$
+
+    $C_p$ compressible pressure coefficient
+    $C_{p,0}$ incompressible pressure coefficient
+
+Lift coefficient compressibility correction
+
+    $$C_l = \frac{C_{l,0}}{\sqrt{1-M_\infty^2}} = \frac{C_{l,0}}{\beta}$$
+
+    $C_l$ compressible lift coefficient
+    $C_{l,0}$ incompressible lift coefficient
+
+    lift correction rule applicable up to mach number ~ 0.7
+
+*** Lecture 6: Critical Mach number
+- flow speed over air flow is high than velocity
+- at some point for a velocity << M=1, M=1 is reached over the airfoil
+- => critical pressure coefficient, critical mach number
+- increasing thickness of airfoil -> higher velocity over airfoil
+- flat plate: Mcritical = 1
+- thicker airfoil -> C_p goes to more negative values
+
+Relation between critical M and critical C_p
+
+    $$C_p = \frac{2}{\gamma M_\infty^2} \left[ \left( \frac{1 + \frac{1}{2} (\gamma -1) M_\infty^2}{1 + \frac{1}{2} (\gamma -1) M^2} \right)^{\frac{\gamma}{\gamma - 1}} - 1 \right]$$
+
+    $M_\infty$ free flow speed
+    $M$ speed over airfoil
+
+    when M=1: $M_\infty = M_{crit}$
+              $C_p = C_{p,crit}$
+
+When M=1 and $C_p = C_{p,crit}$:
+
+    $$C_{p,crit} = \frac{2}{\gamma M_\infty^2} \left[ \left( \frac{2 + (\gamma -1) M_\infty^2}{ \gamma + 1} \right)^{\frac{\gamma}{\gamma - 1}} - 1 \right]$$
+
+    (airfoil independent curve)
+
+Airfoil dependent curve:
+
+    $$C_{p,min} = \frac{C_{p,0min}}{\sqrt{1-M_\infty^2}}$$
+
+    (intersection with airfoil dependent curve gives critical Mach number
+
+What happens when speed is increased accross critical mach number:
+- locally section with supersonic flow will develop
+- lower surface will develop supersonic areas as well
+- shock waves will appear
+- boundary layer will separate when shock is big enough
+- => high pressure drag
+- Mach number where this start: Mach number for drag divergence
+- drag will increase until free stream has reached M=1
+- initially people thought drag rise will not end => sound barrier
+- when flow is entirely supersonic, C_d reduces again
+
+Supercritical airfoils
+- supersonic velocity over large part of upper surface slightly above
+  critical C_p so that heavy shocks will be avoided
+- weak shocks
+- much lower drag
+
+Wing sweep
+- due to angle, wing profile, sees reduced speed
+- $V = V_\infty \cos \Lambda$
+- critical mach number increases
+- could also considered differently by looking at the
+  increased length in flow direction
+- relative thickness decreases
+- lowers lift
+
+*** Lecture 7: Finite Wings
+**** Finite Wings, induced drag
+- flow around wing tips generates tip vortices
+- chord line $\alpha$
+- incoming free stream flow $V_\infty$
+- lift force $L_1$ perpendicular to free stream flow
+- wing "sees" stream under $\alpha_{eff} = \alpha - \alpha_{i
+}$
+- lift vector points backwards by $\alpha_i$
+- new lift vector has a drag component
+  $$D_i = L \sin \alpha_i$$
+- since $$\alpha_i$$ is small: $$\sin \alpha_i \approx \alpha_i$$
+  $$D_i = L \alpha_i$$
+  $\alpha_i$ in radians
+
+From incompressible flow theory:
+
+    $$\alpha_i = \frac{C_L}{\pi A}$$        with $$A = \frac{b^2}{S}$$
+
+    $$C_{D_i} = \frac{C_L^2}{\pi A}$$
+
+Span efficiency factor
+
+    $$C_{D_i} = \frac{C_L^2}{\pi A e_1}$$     $$e_1$$: Span efficiency factor
+
+    | elliptical loading     | e1 = 1 | minimum induced drag |
+    | non-elliptical loading | e1 < 1 | higher induced drag  |
+
+total drag = profile drag + induced drag
+
+    $$C_D = C_d + \frac{C_L^2}{\pi A e_1}$$
+
+Aspect ratio:
+- high aspect ratio: low induced drag (glider)
+- low aspect ratio: high induced drag
+
+**** Lift-curve slope
+Induced angle of attack for general wing
+
+    $$\alpha_i = \frac{C_L}{\pi A e_1}$$  angle in radians (multiply with 57.3 for angle in degrees)
+
+    $$\alpha_i = \frac{57.3\,C_L}{\pi A e_1}$$  angle in degrees
+
+From thin airfoil theory:
+
+    $$a_0 = \frac{d C_l}{d\alpha}$$    lift gradiant for the profile (note small l)
+
+    $$a_0 = 2 \pi /\mathtt{rad} = 0.1097 / \,^\circ$$
+
+    $$a_0 = \frac{dC_L}{d\alpha}$$     lift gradiant for the actual wing (note capital L)
+
+    $$a = \frac{d C_L}{d\alpha} = \frac{a_0}{1 + \frac{a_0}{\pi A e_1}} $$  a_0 per radians
+
+    $$a = \frac{d C_L}{d\alpha} = \frac{a_0}{1 + \frac{57.3 a_0}{\pi A e_1}} $$  a_0 per degree
+
+
+    $$a_0 = \frac{dC_l}{d\alpha}$$
+
+
+    $$C_D = C_d + \frac{C_L^2}{\pi A e_1}$$         Wing
+           ^      ^
+           |      induced drag
+           profile drag
+
+    $e$: efficiency factor, not oswald factor
+** Week 6
+*** Lecture 1: Introduction to flight mechanics
+**** Introduction
+- gliding
+- fuel
+- max min speed
+- morphology
+**** Equation of Motion
+Reference frame: earth surface, earth axis system
+- earth is round, centrifugal force
+- aircraft flying at 10km height:
+
+  $$a= \frac{V^2}{R}$$
+
+  $$R = R_e + h$$
+
+  $$R = 6371 + 10 = 6381km$$
+
+  $$a = \frac{250^2}{6381 \cdot 10^3} = 0.0097m/s^2$$
+
+- centrifugal accelleration very small: can be neglected
+- earth is rotating, very small, can be neglected
+
+More reference frames:
+- moving earth reference system, attached to aircraft, but moving along
+- body axis system attached to the aircraft axes
+  - can observe $\theta$ with respect to horizon
+- airspeed vector, angle to horizon: flightpath angle, called airpath axes system
+
+Angles:
+- flight path angle \gamma: horizon (moving earth axis) and velocity V
+- angle of attack \alpha: aircraft nose to velocity vector V
+- pitch angle \theta: aircraft nose to moving earth axis = \gamma + \alpha
+
+$$ F = m \cdot a $$
+
+Forces acting on the aircraft:
+- gravitational force w, weight, drawn along z axis of moving earth axis system
+- assume constant gravity
+  $$F = \frac{\mu M_1 M_2}{R^2}$$
+
+- lift force, perpendicular to airspeed vector
+- drag force, parallel to airspeed vetor
+- defined in airpath axes system
+
+- thrust force, can be drawn with an angle to airspeed vector
+- T: thrust angle of attack
+
+Accelleration:
+- free to define in whatever axis system, but airpath axes most convenient
+- forward accelleration
+
+  $$\frac{dV}{dt}$$
+
+- perpendicular acceleration
+
+  $$a = \frac{V^2}{R}$$
+
+  $$\omega R = V$$
+
+  $$\omega = \frac{d\gamma}{dt}$$
+
+  $$a = V \frac{d \gamma}{dt}$$    a equal to change of flight path angle
+
+Equation of motions
+
+(1) $$ \sum F_{\|V} : m \frac{dV}{dt} = T \cos \alpha t - D -W \sin \gamma$$    \alpha parallel to flight path: cos \alpha = 1
+
+(1) $$ \sum F_{\|V} : \frac{W}{g} \frac{dV}{dt} = T - D -W \sin \gamma$$
+
+(2) $$ \sum F_{\perp V} : m V \frac{d \gamma}{dt} = L + T \sin \alpha t - W \cos \gamma$$
+
+(2) y$$ \sum F_{\perp V} : \frac{W}{g} V \frac{d \gamma}{dt} = L - W \cos \gamma$$
+
+**** Aerodynamics
+Different Variables
+- independent: t
+- state: $\gamma, V$
+- other: $T, L, W, D, \alpha_T$
+- try to express variables using state, eliminate variables
+
+Lift-drag polar
+
+    zero lift drag:    $$C_{D_0}$$
+
+    lift-induced drag: $$\frac{C_L^2}{\pi A \Phi}$$
+
+    $$C_D = C_{D_0} + \frac{C_L^2}{\pi A \Phi}$$
+
+    $$A = \frac{b^2}{S}$$:    aspect ratio    
+
+    $$\Phi$$:          span efficiency number
+
+    $$C_D = C_{D_0} + \frac{C_L^2}{\pi A e}$$
+
+    $$e$$: Oswald efficiency factor
+
+Total drag polar
+- in essence parabolic equation: $y = ax^2 + b$
+- to be more accurate:           $y = ax^2 + bx + c$
+
+Desired: lift and drag as function of airspeed
+
+    $$ D = C_{D_0} \frac{1}{2} \rho V^2 S + k_1 W + k_2 \frac{W^2}{S} \frac{2}{\rho} \frac{1}{V^2} = f(V^2) + f(\frac{1}{V^2})$$
+
+    - one part decreases with airspeed, other increases with airspeed
+    - point of minimum drag
+    - induced drag $D_i$ decreases with airspeed
+    - zero-lift drag $D_0$ increases with airspeed
+    
+**** Propulsion
+Air breathing engines:
+- $$V_0$$ -> $$\dot{m}$$ -> $$V_j$$
+- exit mass flow = intake mass flow plus fuel
+
+$$T = (\dot{m} + \dot{m}_f) \cdot V_j - \dot{m} V_0$$ (pressure at exit equal to athmospheric pressure)
+
+$$T = \dot{m} \cdot (V_j - V_0)$$            (simplification without fuel mass flow)
+
+Two options:
+- little air and high velocity increase: jet engine
+- lot of air with little increase in velocity: propeller
+
+Total efficiency:
+$$P_a = TV$$    power available
+$$Q = \dot{m}_f H$$   engine input energy (H=energy per unit of fuel)
+
+$$\eta_t = \frac{P_a}{Q}$$
+
+$$P_j = \frac{1}{2} \dot{m} V_j^2 - \frac{1}{2} \dot{m} V_0^2$$   Jet Power
+
+
+$$\eta_t = \frac{P_a}{Q} = \frac{P_a}{Q} \frac{P_j}{P_j}$$
+
+$$\eta_t = \eta_{th} \cdot \eta_j$$
+
+    with: $$\eta_{th} = \frac{P_j}{Q}$$
+          $$\eta_{j}  = \frac{P_a}{P_j}$$
+
+$$\eta_j = \frac{2}{1 + \frac{V_j}{V}} $$    jet efficiency only depends on jet speed and air speed
+
+Example:
+A   T = 1000 N
+    mdot = 10 kg/s
+
+    T = mdot (V_j - V)
+    V_j - V = 100 m/s
+
+    etaj = 2 / (1 + 200/100) = 0.666 = 66.6 %
+
+B   V = 200 m/s
+    T = 1000 N
+    Vj = 300 m/s
+    etaj = 2 / (1 + 300/200) = 0.80 = 80 %
+
+same thrust, same mass flow, very different efficiency. flying faster
+improves efficiency for jet engines. => jet engines for high speed flight.
+**** Simplified representation of propulsion
+
+$$ T = \dot{m} \cdot ( V_j - V_0) $$
+
+- Thrust const for different airspeed, given throttle const
+- with higher air speed, mass flow increases and $$V_j - V_0$$ decreases, cancels out
+- for calculation, assume T is const with airspeed for given altitude and throttle
+- follows power available becomes staight line over airspeed
+
+For propeller:
+
+$$\eta_j = \frac{P_a}{P_{br}}$$    propeller efficiency = power available / shaft power
+
+$\eta_j$ at various airspeeds can be kept constant by varying the propeller pitch
+
+$P_{br}$ assumed to be constant as well for a given engine
+
+Follows $P_a$ is constant as well independent of flight speed
+**** Performance diagram
+
+[[./force-power-diagram.png]]
+
+Use force diagram for jet and power diagram for propeller due to
+constness with regards to flight speed
+
+*** Lecture 2: Horizontal flight
+**** Introduction to horizontal flight
+Profile:
+- take off and climb
+- cruise
+- descend and land
+
+Topics:
+- minimum airspeed
+- maximum airspeed
+- maximum range
+- maximum endurance (time in air)
+
+Simplication in equations of motion:
+
+    $$\sum F_{\|V} : T = D $$
+
+    $$\sum F_{\perp V} : L = W$$
+
+Sprit of St. Louis
+
+    CD = 0.0686 - 0.0880 * CL + 0.169 * CL^2
+    CLmax = 1.24
+
+    Engine: 236 hP at 1800 RPM
+
+    Pr = D * V
+    Pilot can choose V (CL)
+    CL = CLmax
+
+    L = W -> V = sqrt( W/S * 2/rho * 1/CLmax )
+ 
+    $$ D = \frac{C_d}{C_{L_{max}}} W $$
+
+    CD can be calculated, we know CD => Pr = D * V
+**** Minimum and maximum airspeed
+Steady horizontal flight
+
+Minimum airspeed
+    L=W
+    $$V_{min} = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_{l_{max}}}}$$
+
+Spirit of St. Louis
+    CLmax = 1.24
+    S     = 29.68 m^2
+    Wmax  = 22.8 kN    (weight)
+    Wmin  = 10.7 kN
+    rho   = 1.225 kg/m^3
+
+    Vmin = 31 m/s = 114 km/h  (maximum weight)
+    Vmin = 22 m/s = 79 km/h   (minimum weight)
+
+Boeing 747 with flaps in landing configuration CL >= 2.0
+Flaps are heavy and increase drag
+
+Maximum airspeed
+    T=D
+    Intesection of power available with power required
+
+Spirit of St. Louis
+    Calculated = 55 m/s
+    Flight test data = 57.7 m/s
+
+Analytically:
+    L=W
+    T=D <=> Pa=Pr (Pamax)
+
+    $$P_{a_{max}} = \frac{C_D}{C_L} W V$$   C_D is a function of C_L (quadratic eq)
+    
+    $$P_{a_{max}} = \sqrt{ \frac{W^3}{S} \frac{2}{\rho} \frac{ (C_{D_0} + k_1 C_L + k_2 C_L^2)^2}{C_L^3}}$$
+
+    => solve for C_L 
+    => choose smallest C_L (other C_L corresponds to
+       impossible condition below $V_{min}$)
+
+    $$V = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_L}}$$
+**** Range
+Specific Range
+    $$\frac{V}{F} = \frac{m}{kg}, \frac{m}{N}$$  -> maximze
+    F: fuel flow
+    V: speed
+
+Fuel flow
+
+    $$F = c_p P_{br(brake)}$$    $c_p$:  power specific fuel consumption
+                        $P_{br}$: power delived at the shaft
+                             (break was used to measure the shaft power => brake)
+    $$P_a = \eta_j \cdot P_{br}$$
+
+    $$P_{br} = \frac{P_a}{\eta_j}$$
+
+    $$F = c_p \frac{P_a}{\eta_j}$$    T=D
+
+    $$P_a = P_r = D\cdot V$$
+
+    $$\frac{V}{F} = \frac{\eta_j}{c_p}\frac{1}{D}$$
+
+Typical $$\eta_j c_p \approx constant$$
+
+    $$\left(\frac{V}{F}\right)_{max} \Rightarrow \left(\frac{1}{D}\right)_{max} \Rightarrow D_{min}$$
+
+    [[./minimum-drag.png]]
+
+    power diagram: minimum gradient line touches performance curve
+    drag curve: minimum
+
+Optimum air speed
+    T=D, L=W, D_min
+
+    $$ V = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_L}}$$
+
+    $$D_min \Rightarrow \left(\frac{C_D}{C_L} W \right)_{min} \Rightarrow \left(\frac{C_D}{C_L} \right)_{min} \Rightarrow \left(\frac{C_L}{C_D} \right)_{max}$$
+
+    $$C_D = C_{D_0} + k_1 C_L + k2 C_L^2$$
+
+    $$\frac{d}{dC_L} \left(\frac{C_D}{C_L} \right) = 0$$
+
+    $$C_{L_{opt}} = \sqrt{\frac{C_{D_0}}{k_2}} \Rightarrow V_{opt} = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{\sqrt{\frac{C_{D_0}}{k_2}}}}$$ 
+Spirit of St. Louis
+
+    Vopt = 30.45 m/s
+
+    etaj = 0.75
+    cp = 6.45 * 10e-8 kg/Ws
+
+    V/F = 8445.3 m/kg   (calculated)
+    V/F = 8118.3 m/kg   (flight test data)
+**** Endurance
+Maximum time an aircraft can stay in the air
+- minimize fuel flow to get maximum endurance
+- fuel flow is fuel amount burnt per second
+- max endurance E_max
+
+$$ F = c_p P_{br} $$
+
+$$ F = c_p \frac{P_a}{\eta} = c_p \frac{P_a}{\eta}$$       since $$P_a = P_r$$
+
+$$E_{max} \Rightarrow F_{min} \Rightarrow P_{r_{min}}$$   minimum in the performance diagram
+
+Minimum power required
+
+     $$P_{r_{min}} = (D \cdot V)_{min} = \left(\frac{C_D}{C_L}\right) W \sqrt{\frac{W}{S}\frac{2}{\rho}\frac{1}{C_L}}$$
+
+     $$P_{r_{min}} \Rightarrow \left(\frac{C_D^2}{C_L^3}\right)_{min} =  \left(\frac{C_L^3}{C_D^2}\right)_{max} = f(C_L)$$
+
+     $$C_D = C_{D_0} + k_1 C_L + k_2 C_L^2$$   lift-drag polar
+     $$C_D = f(C_L)$$
+
+     $$\frac{d}{dC_L} \left(\frac{C_L^3}{C_D^2} \right) = 0$$
+
+     $$\frac{C_D^2 \cdot 3 \cdot C_L^2 - C_L^3 \cdot 2 \cdot C_D \frac{dC_D}{dC_L}}{C_D^4} = 0$$   $$C_D^4 \neq 0$$
+
+     $$\frac{3}{2} \frac{C_D}{C_L} = \frac{dC_D}{dC_L}$$   (put in lift drag polar)
+
+     $$\frac{3}{2} \frac{C_{D_0} k_1 C_L + k_2 C_L^2}{C_L} = k_1 + 2 k_2 C_L$$
+     
+
+     $$3(C_{D_0} k_1 C_L + k_2 C_L^2) = 2 k_1 C_L + 4 k_2 C_L^2 $$    can be written as ax^2 + bx + c = 0
+
+Minimum power required solution
+
+     $$C_{L_{opt}} = \frac{k_1 \pm \sqrt{k_1^2 + 12 k_2 C_{D_0}}}{2 k_2} $$     (all constant => solution constant)
+
+     $$V = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_L}}$$
+
+**** Speed stability and instability
+- positive force/airspeed gradient => stable on induced speed change
+- negative force/airspeed gradient => instable on induced speed change
+- problem at small speed, pilot or autothrust have to compensate
+
+** Week 7
+*** Lecture 3: Climbing and descending flight
+**** Introduction
+- normal 3 degree descent
+- large climb angle vs large rate of climb
+- climb angle: object in path
+- large rate of climb: reach cruise altitude quickly
+
+Assumptions:
+- climb angle $\gamma$ constant, $\frac{d\gamma}{dt} = 0$
+- steady flight, V constant, $\frac{dV}{dt} = 0$
+- small climb angle, $\cos \gamma \approx 1; \sin \gamma \approx \gamma$
+- thrust vector parallel to V: $T \| V \Rightarrow \cos \alpha_T \approx 1, \sin \alpha_T = 0$
+
+    $$\| V: T - D - W \sin \gamma = 0 \Rightarrow $$
+
+    $$\sin\gamma = \frac{T-D}{W}$$      (T, D, W in Newton)
+
+    $$V\sin\gamma = \frac{P_a - P_r}{W} = \mathrm{ROC}$$    (rate of climb)
+
+    $$\perp V: L - W = 0$$
+**** Maximum climb angle
+- climb angle can't be measured
+- observed pitch angle $\theta$
+- climb depends on angle of attack: $$\gamma = \theta - \alpha$$
+
+[[./pitch-climb-alpha.png]]
+
+- for low speed, gamma approx 0 and pitch is approx equal alpha
+- for high speed, only small alpha needed due to dynamic
+  pressure. pitch much lower to get similar climb speed
+
+=> document airspeed of steepest climb
+
+$$L = W$$
+
+$$sin \gamma_{max} = \frac{(T-D)_{max}}{W}$$
+
+$$V \sin \gamma = \frac{P_a - P_r}{W}$$
+
+=> look up in performance diagram (force over airspeed)
+=> find point of maximum difference between drag and thrust curve
+=> point of lowest drag, optimal $C_L$
+
+Analytically:
+
+    $$C_{L_{opt}} = \sqrt{\frac{C_{D_0}}{k_2}} \ \ \ \ \ \ \ \ C_D = C_{D_0} + k_1 C_L + k_2 C_L^2$$
+
+    $$V_{opt} = \sqrt{ \frac{W}{S} \frac{2}{\rho} \frac{1}{C_{L_{opt}}}}$$
+**** Minimum descent angle
+
+$$ T - D - W \sin \gamma = 0 $$ (steady straight T = 0)
+$$ L = W $$
+
+$$\sin \gamma = -\frac{D}{W} = - \frac{C_D \frac{1}{2} \rho V^2 S}{C_L \frac{1}{2} \rho V^2 S} = - \frac{C_D}{C_L}$$    
+
+$$\overline{\gamma} = - \gamma \rightarrow \sin \overline{\gamma} = \frac{C_D}{C_L}$$    (descend angle)
+
+$$\overline{\gamma}_{min} \rightarrow \left(\frac{C_D}{C_L}\right)_{min} \rightarrow \left(\frac{C_L}{C_D}\right)_{max}$$
+
+$$C_D = C_{D_0} + k_1 C_L + k_2 C_L^2$$
+
+To find optimum C_L/C_D, take derivative, equate to 0. Done earlier
+for maximum range. result:
+
+$$C_{L_{opt}} = \sqrt{\frac{C_{D_0}}{k_2}} \Rightarrow V_{opt} = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{\sqrt{\frac{C_{D_0}}{k_2}}}}$$ 
+
+$$\sin \overline{\gamma} = \frac{2 C_{D_0}}{\sqrt{\frac{C_{D_0}}{k_2}}} + k_1$$      (all constants)
+
+-> no weight in the equation, so independent of weight but airspeed
+-> has weight in equation, so descent speed is different for different
+   weight
+**** Maximum rate of climb
+
+$$V\sin\gamma = \frac{P_a - P_r}{W} = \mathrm{ROC}$$    (rate of climb)
+
+In the performance diagram (power over airspeed), choose
+airspeed where difference between power required and power
+available is max.
+
+Possible to calculate analytically for propeller aircraft,
+where we can assum constant power available => use maximum
+endurance point for propeller aircraft, which is at minimum
+power required
+
+
+     $$C_{L_{opt}} = \frac{k_1 \pm \sqrt{k_1^2 + 12 k_2 C_{D_0}}}{2 k_2} $$ 
+
+     $$V_{opt} = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_{L_{opt}}}}$$
+
+
+     $$D = C_D \frac{1}{2} \rho V^2 S \ \ \ \ \ P_r = DV $$
+
+     $$\mathrm{ROC}_{max} = \frac{(P_a - P_r)_{max}}{W}$$
+
+**** Minimum rate of descent
+Rate of descent:
+     
+     $$\mathrm{ROC} = \frac{(P_a - P_r)}{W} = - \frac{D V}{W} \ \ \ \ \ \ P_a = 0$$
+     
+     $$\mathrm{ROC} = \sqrt{\frac{W}{S}\frac{2}{\rho}\frac{C_D^2}{C_L^3}} \rightarrow \mathrm{ROC}_{max} \rightarrow \left(\frac{C_L^3}{C_D^2}\right)_{max}$$
+     
+See endurance for solution of maximum $C_L$ (diff, equate to 0):
+
+
+     $$C_{L_{opt}} = \frac{k_1 \pm \sqrt{k_1^2 + 12 k_2 C_{D_0}}}{2 k_2} $$
+
+     $$V_{opt} = \sqrt{\frac{W}{S} \frac{2}{\rho} \frac{1}{C_{L_{opt}}}}$$
+
+This assumes constant $\rho$. Actually the density and gets higher
+closer to ground and rate of descent becomes smaller.
+
+*** Lecture 4: The flight envelope
+**** Altitude effects on aircraft performance
+- $\alpha$ constant
+- $C_L$ constant
+- $C_D$ constant
+- $L=W$
+
+Force over speed diagram, does drag change with density?
+    
+    $$ D = \frac{C_D}{C_L} W \neq f(\rho)$$
+    
+    $$D_{H_1} = \frac{C_D}{C_L} W = D_{H_2}$$
+    
+    => D is not dependend on air density
+    
+Force over speed diagram, is speed affected by air density?
+
+    $$V = \sqrt{\frac{W}{S}\frac{2}{\rho}\frac{1}{C_L}}$$
+
+    => lower density needs higher speed
+    => curve in performance diagram moves to the right
+
+Power over speed diagram
+
+    $$\frac{P_{H_1}}{V_{H_1}} = \frac{P_{H_2}}{V_{H_2}} = constant$$
+
+    => performance point is moving to the up right while keeping ratio
+
+Effect on propulsion
+
+    $$T = \dot{m} (V_j - V_0)$$
+
+Take off distance example small business jet
+    - 0  °C: 2000m
+    - 30 °C: 6000m
+
+Modelling propulsion effects
+
+    Thrust: $$\frac{T}{T_0} = \left(\frac{\rho}{\rho_0}\right)^n$$
+
+    Power:  $$\frac{P}{P_0} = \left(\frac{\rho}{\rho_0}\right)^n$$
+**** Performance Limits
+Minimum airspeed
+- drag-airspeed curve moves to the right with altitude
+- available power decreases with altitude
+- at some point curves intersect when altitude increases
+
+Maximum airspeed
+- drag-airspeed curve moves to the right with altitude
+- available power decreases with altitude
+- maximum speed can either increase or decrease depending on aircraft
+  characteristics
+
+Maximum rate of climb
+- distance between power required and power available in performance
+  diagram
+- with higher altitude, curves get closer and maximum rate of climb
+  decreases
+- altitude over rate of climb, steadily decreasing line
+
+Performance limits shown in altitude over airspeed diagram
+- max altiude max point: theoretical limit
+- left edge show stall limit
+- right side shows maximum airspeed depending on altitude
+- maximum ROC somewhere in the middle
+
+**** Maximum altitude Lockheed U-2
+using a one-term lift drag polar here, hence only k instead of k1 and k2
+
+$$\rho_{min}
+ = \frac{\rho_s}{T_s} \left(\frac{C_D}{C_L}\right)_{min} W \rightarrow \left(
+\frac{C_L}{C_D}\right)_{max}$$
+
+
+$$C_L = \sqrt{\frac{C_{D_0}}{k}}$$
+
+$$C_D = 2 * C_{D_0}$$
+
+$$\rho_{min} = \frac{\rho_s}{T_s} 2 \sqrt{\frac{C_{D_0}}{\pi A e}} W$$
+
+To fly at high altitude/low density:
+=> small aspect ratio      $A$ 
+=> small 0-lift drag       $C_{D_0}$ 
+=> small weight            $W$ 
+=> high thrust at high alt $T_s$
+**** Operational limits
+Manoevre loads
+- L=W horizontal flight
+- L>W pull up
+- load factor
+  $$ n = \frac{L}{W} \rightarrow L = nW$$   expressed in g forces
+- flight manoevering envelope, load factor n over Veas
+- e.g. commercial aircraft load factor -1 < n 2.5
+- cruise speed V_c, +25% design dive speed V_d, stall speed
+
+  [[./flight-envelope.png]]
+
+Aeroelastic effects
+- structural deformations
+- changes flight characterstics (e.g. wing changes angle or vibrates)
+**** Operational limits 2
+Gust loads
+- change angle of attack
+- U gust vectorially added to V
+- increases angle of attack
+
+  $$\Delta n = \frac{dC_L}{d \alpha} U \frac{1}{2} V \frac{S}{W}$$
+
+  $$\Delta n = K \cdot U_{gust} * V$$
+
+Design dive speed
+  
+  $$\frac{1}{2} \rho V_{tas}^2 = \frac{1}{2} \rho_0 V_{eas}^2$$
+
+  $$V_{d,tas} = \sqrt{\frac{\rho_0}{\rho}} V_{d,eas}$$  $$\rho_0$$: alt density $$\rho$$: sea level
+
+  - maximum operating speed lower than dive speed
+
+Maximum Mach number
+- factors in lift-drag polar change with mach number
+- M_crit is airspeed where air speed on parts of airfoil exceed M=1
+- exceeding M_crit cause shock waves
+- vibrations
+- control surface become less effective
+- safety margin, defines max operating mach number
+
+Pressurized cabin
+- fuselage designed for maximum differential pressure
+- results in maximum flight altitude
+- added to flight envelope diagram as well
+
+[[./flight-envelope-2.png]]
+
+[[./manoeuvre-envelope.png]]
+
+**** Flight envelope and instruments
+- flight limits are altitude dependent
+- hard to monitor
+
+Stall speed
+- airspeed indicator
+- pitot tube + static port
+- pressure difference can be measured
+- density unknown
+- assume sea-level density
+- equivalent air speed
+- true airspeed is unknown
+- stall speed still correctly shown
+- dynamic pressure measure, experienced by the wing, correctly predicts
+
+Maximum operating air speed
+- yellow range in air speed indicator
+- can be dangerous in bad whether
+- can be problem during flight manoevre
+
+Maximum altitude
+- static pressure on sea level may vary
+- maximum altitude is fixed pressure which can be shown on instrument
+
+Max operating mach number M_MO
+- mach number can be determined from static and dynamic pressure
+
+Maximum airspeed limit
+- depends on power
+- not need to be indicated
+
+**** Advanced topics
+Simplifactions done:
+- point mass
+- point performance
+
+Path performance:
+- climbing to 10000m at M=1.5
+- involves climbing to 8000m, descending to 7000m to get supersonic,
+  accellerating to M=2 and climbing resulting in M= 1.5
+- reason is high drag around M=1, dive through sound barrier
+
+Other:
+- wind, microburst
+- turning performance
