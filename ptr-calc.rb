@@ -3,7 +3,7 @@
 # ptr-calc.rb
 # 
 # calculate pressure, temperature, density in standard atmosphere
-# for given altitude
+# for given altitude in m or ft
 #
 
 T0   = 288.15  # K
@@ -11,6 +11,7 @@ P0   = 101325  # Pa
 RHO0 = 1.225   # kg/m^3
 G    = 9.80665 # m/s^2
 R    = 287     # J/kgK
+MPFT = 0.3048  # m/ft
 
 LAYERS = [
     { :h0 => 0,     :h1 => 11000, :a => -0.0065 },
@@ -21,9 +22,13 @@ LAYERS = [
     # ... to be continued ...
 ]
 
-def ptr_calc(alt)
+def ptr_calc(alt, qnh = nil)
     t = T0
-    p = P0
+    if qnh
+        p = qnh
+    else
+        p = P0
+    end
     rho = RHO0
 
     LAYERS.each do | layer |
@@ -54,17 +59,30 @@ def ptr_calc_layer(t0:, p0:, rho0:, h0:, h1:, a: nil)
 end
 
 if __FILE__ == $0
-    if ARGV[0] and ARGV[0].match(/[\d.]+/)
-        alt = ARGV[0].to_f
+    if ARGV[1]
+        qnh = ARGV[1].to_f * 100
+    end
+    if ARGV[0]
+        if ARGV[0].match(/[\d.]+m/)
+            alt = ARGV[0].to_f
+        elsif ARGV[0].match(/[\d.]+ft/)
+            alt = ARGV[0].to_f * MPFT
+        else
+            alt = ARGV[0].to_f
+        end
     end
     if not alt or alt < 0
-        puts "usage: ptr-calc <altitude>"
+        puts "usage: ptr-calc <altitude> [QNH]"
         exit 1
     end
 
-    t, p, rho = ptr_calc(alt)
+    t, p, rho = ptr_calc(alt, qnh)
 
-    puts("alt  = #{alt}")
+    puts("alt  = #{alt} m")
+    puts("     = #{alt / MPFT} ft")
+    if qnh
+        puts("qnh  = #{qnh / 100} hPa")
+    end
     puts("t    = #{t} K")
     puts("p    = #{p} Pa")
     puts("rho  = #{rho} kg/m^3")
