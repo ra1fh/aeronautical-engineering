@@ -9,9 +9,9 @@
 def wind_triangle(tc, tas, wa, ws)
     tcr = tc * Math::PI / 180
     war = wa * Math::PI / 180
-    wcar = Math.asin(ws / tas * Math.sin(war - tcr))
+    wcar = Math.asin(ws / tas * Math.sin(war + tcr))
 
-    gs = ws * Math.sin(wcar.abs + war - tcr) / Math.sin(wcar)
+    gs = ws * Math.sin(war + tcr - wcar) / Math.sin(wcar)
     
     return gs, wcar * 180 / Math::PI
 end
